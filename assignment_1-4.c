@@ -24,6 +24,9 @@ int main(int argc, char* argv[]) {
 	write(fd,arr,10);
 	lseek(fd,30,SEEK_CUR);
 	write(fd,arr1,10);
+
+	i = lseek(fd,0,SEEK_HOLE);
+	printf("%d",i);
 	close(fd);	
 	return 0;
 }
